@@ -1,24 +1,34 @@
 <template>
     <div>
-        <select >
-            <option disabled >Не выбрано</option>
-            <option>Сделка</option>
-            <option>Контакт</option>
-            <option>Компания</option>
+        <select class="select-option">
+        <option
+        v-for="option in options" 
+        :value="options.value"
+        :isOpen="options.isOpen"
+        v-on:openOption="openOption"
+        >
+        {{ option.text }}
+        </option>
         </select>
     </div>
 </template>
 
 <script setup>
-import { useListStore } from '../store';
-import { toRefs } from 'vue';
+const options = [
+    {text:"Не выбрано", value:1,isOpen:true },
+    {text:"Сделка", value:2,isOpen:false },
+    {text:"Контакт", value:3,isOpen:false },
+    {text:"Компания", value:4,isOpen:false }
+]
 
-const store = useListStore()
-const {getToken,createLead} = toRefs(store)
-console.log(getToken.value(123))
-console.log(createLead.value(123))
+const isOptionOpen = this.isOpen
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.select-option {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+}
 </style>

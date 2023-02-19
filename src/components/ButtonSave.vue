@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="button-save active">Создать</button>
+        <button class="btn btn-succses">Создать</button>
     </div>
 </template>
 
@@ -9,7 +9,7 @@
 </script>
 
 <style scoped>
-.button-save {
+.btn-succses {
     margin: 10px;
     color: black;
     background-color: white;
@@ -20,7 +20,7 @@
     border-radius: 4px;
     border: 1px solid gray;
 }
-.button-save:active {
+.btn {
     color: white;
     background-color: dodgerblue;
 }

@@ -1,6 +1,4 @@
 <script setup>
-import DropDownList from './components/DropDownList.vue';
-import ButtonSave from './components/ButtonSave.vue'
 import ResultIdObject from './components/ResultIdObject.vue'
 
     
@@ -8,8 +6,6 @@ import ResultIdObject from './components/ResultIdObject.vue'
 
 <template>
   <div>
-  <DropDownList/>
-  <ButtonSave/>
   <ResultIdObject/>
   </div>
 </template>
