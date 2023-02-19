@@ -5,7 +5,7 @@
         <ButtonSave/>
     </div>
         <div class="id-object">
-        <p>{{ store }}</p>
+        <p>{{ lead }}</p>
         </div>
         
     </div>
@@ -20,8 +20,7 @@ import { toRefs } from 'vue';
 
 const store = useListStore()
 const {getToken,createLead} = toRefs(store)
-console.log(getToken.value(123))
-console.log(createLead.value(123))
+const lead = createLead.value()
 
 </script>
 <style scoped>

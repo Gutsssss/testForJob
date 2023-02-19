@@ -10,9 +10,6 @@ export const useListStore = defineStore("list", {
         base_domain: 0 
     }
   },
-  getters: {
-    getLists(state) {},
-  },
   actions: {
     async getToken(token) {
       const  data  = axios.get("https://test.gnzs.ru/oauth/get-token.php", {

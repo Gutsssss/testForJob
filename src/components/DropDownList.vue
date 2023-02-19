@@ -21,7 +21,6 @@ const options = [
     {text:"Компания", value:4,isOpen:false }
 ]
 
-const isOptionOpen = this.isOpen
 </script>
 
 <style scoped>
